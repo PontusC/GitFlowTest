@@ -3,6 +3,7 @@ import subprocess
 def runCommand(command):
     try:
         result = subprocess.run(command)
+        print(result)
         return result.stdout
     except Exception as e:
         return f"Error: {e}"
@@ -13,5 +14,5 @@ runCommand("git checkout main")
 runCommand("git merge release")
 # Switches from develop branch to main branch
 runCommand("git checkout main")
-# Merges given branch (release) into specified branch (release)
-runCommand("git merge release")
+# Merges current branch (main) with specified branch (release)
+runCommand("git merge release -m'Merge release and main'")

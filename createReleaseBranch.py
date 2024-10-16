@@ -3,12 +3,12 @@ import subprocess
 def runCommand(command):
     try:
         result = subprocess.run(command)
+        print(result)
         return result.stdout
     except Exception as e:
         return f"Error: {e}"
     
 # Creates a new branch "release" based on develop
 runCommand("git branch release")
-# Merges changes from develop into release
-runCommand("git checkout release")
-runCommand("git merge develop")
+# Pushes changes from develop to release
+runCommand("git push origin release")
