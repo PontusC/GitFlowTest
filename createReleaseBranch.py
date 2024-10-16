@@ -11,4 +11,5 @@ def runCommand(command):
 # Creates a new branch "release" based on develop
 runCommand("git branch release")
 # Pushes changes from develop to release
-runCommand("git push origin release")
+runCommand("git checkout release")
+runCommand("git merge develop -m'Merging develop into release'")
