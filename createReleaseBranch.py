@@ -9,4 +9,4 @@ def runCommand(command):
     
 
 runCommand("git branch release")
-runCommand("git push origin/develop release")
+runCommand("git push origin release")
