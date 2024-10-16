@@ -5,4 +5,4 @@ def runCommand(command):
         result = subprocess.run(command)
         return result.stdout
     except Exception as e:
-        return f("Error: {e}")
+        return f"Error: {e}"
