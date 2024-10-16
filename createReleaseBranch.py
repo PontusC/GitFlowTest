@@ -7,4 +7,4 @@ def runCommand(command):
     except Exception as e:
         return f"Error: {e}"
     
-runCommand("git status")
+runCommand("git branch release")
