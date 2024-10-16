@@ -10,7 +10,7 @@ def runCommand(command):
 # Switches from develop branch to release branch
 runCommand("git checkout main")
 # Merges current branch (release) into specified branch (main)
-runCommand("git merge origin/release")
+runCommand("git merge release")
 # Switches from develop branch to main branch
 runCommand("git checkout main")
 # Merges given branch (release) into specified branch (release)
