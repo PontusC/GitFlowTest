@@ -8,8 +8,8 @@ def runCommand(command):
         return f"Error: {e}"
 
 # Switches to relase branch and pulls changes from main
-runCommand("git checkout origin/release")
-runCommand("git merge origin/main")
+runCommand("git checkout release")
+runCommand("git merge main")
 # Switches to develop branch and pulls changes from main
-runCommand("git merge origin/develop")
-runCommand("git merge origin/main")
+runCommand("git merge develop")
+runCommand("git merge main")
