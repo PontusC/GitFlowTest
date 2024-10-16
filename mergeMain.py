@@ -9,6 +9,6 @@ def runCommand(command):
         return f"Error: {e}"
 
 # Switches from develop branch to main branch
-runCommand("git checkout main")
+runCommand(['git', 'checkout', 'main'])
 # Merges current branch (main) with specified branch (release)
-runCommand("git merge release -m'Merge release and main'")
+runCommand(['git', 'merge', 'release', '-m"Merging relase into main"'])

@@ -8,9 +8,15 @@ def runCommand(command):
     except Exception as e:
         return f"Error: {e}"
 
-# Switches to relase branch and pulls changes from main
-runCommand("git checkout release")
-runCommand("git merge main -m'Merges main into release branch'")
-# Switches to develop branch and pulls changes from main
-runCommand("git checkout develop")
-runCommand("git merge main -m'Merges main into develop branch'")
+# Switches to release
+runCommand(['git', 'checkout', 'release'])
+# Merges current branch (main) with specified branch (release)
+runCommand(['git', 'merge', 'main', '-m"Merging main into release"'])
+# Switches to develop
+runCommand(['git', 'checkout', 'develop'])
+# Merges current branch (main) with specified branch (release)
+runCommand(['git', 'merge', 'main', '-m"Merging main into develop"'])
+
+
+
+
