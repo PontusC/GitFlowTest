@@ -7,4 +7,8 @@ def runCommand(command):
     except Exception as e:
         return f"Error: {e}"
     
+# Creates a new branch "release" based on develop
 runCommand("git branch release")
+# Merges changes from develop into release
+runCommand("git checkout release")
+runCommand("git merge develop")
