@@ -8,7 +8,6 @@ def runCommand(command):
         return f"Error: {e}"
     
 # Creates a new branch "release" based on develop
-runCommand("git branch release")
-# Merges changes from develop into release
-runCommand("git checkout release")
-runCommand("git merge develop -m 'Merges develop branch into release'")
+print(runCommand("git branch release"))
+# Pushes changes from develop to release
+print(runCommand("git push origin release"))
