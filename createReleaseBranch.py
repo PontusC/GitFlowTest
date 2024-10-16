@@ -11,4 +11,4 @@ def runCommand(command):
 runCommand("git branch release")
 # Merges changes from develop into release
 runCommand("git checkout release")
-runCommand("git merge develop")
+runCommand("git merge develop -m 'Merges develop branch into release'")
